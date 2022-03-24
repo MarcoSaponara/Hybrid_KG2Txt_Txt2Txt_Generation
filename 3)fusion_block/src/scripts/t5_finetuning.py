@@ -268,7 +268,7 @@ class MyDataset(Dataset):
 tokenizer = T5Tokenizer.from_pretrained('t5-base')
 
 
-args_dict.update({'data_dir': 'data', 'output_dir': 'my_t5', 'num_train_epochs':4})
+args_dict.update({'data_dir': './data', 'output_dir': './my_t5', 'num_train_epochs':4})
 args = argparse.Namespace(**args_dict)
 
 checkpoint_callback = pl.callbacks.ModelCheckpoint(
